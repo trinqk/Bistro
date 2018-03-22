@@ -35,7 +35,6 @@ class MapViewController: UIViewController {
         mapView.showsPointsOfInterest = false
         if CLLocationManager.authorizationStatus() != .authorizedAlways
         {
-            print("hi")
             locationManager.requestAlwaysAuthorization()
         }
         locationManager.delegate = self
