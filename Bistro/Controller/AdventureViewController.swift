@@ -8,23 +8,15 @@
 
 import UIKit
 
-class AdventureViewController: UIViewController {
-
-    @IBOutlet weak var adventureTableView: UITableView!
+class AdventureViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.adventureTableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        
     }
 
     // REQUIRED METHODS
     
-    
-    
-    func configureTableView() {
-        adventureTableView.rowHeight = UITableViewAutomaticDimension
-        adventureTableView.estimatedRowHeight = 100.0
-    }
     
 }

@@ -61,9 +61,13 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationAlwaysAndWhenInUsageDescription</key>
+	<string>Let Bistro help you out!</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Pick Always Allow hehe.</string>
+	<string>Let Bistro help you out!</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Yes!</string>
+	<string>Let Bistro help you out!</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Let Bistro help you out!</string>
 </dict>
 </plist>

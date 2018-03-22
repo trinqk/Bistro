@@ -17,25 +17,10 @@
                     <view key="view" contentMode="scaleToFill" id="G33-8Y-jQG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-xZ-sMP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="sJN-xZ-sMP" firstAttribute="bottom" secondItem="Hei-Tk-78x" secondAttribute="bottom" id="Cgi-9r-hLI"/>
-                            <constraint firstItem="sJN-xZ-sMP" firstAttribute="leading" secondItem="Hei-Tk-78x" secondAttribute="leading" id="Sbb-bb-PgT"/>
-                            <constraint firstItem="sJN-xZ-sMP" firstAttribute="top" secondItem="Hei-Tk-78x" secondAttribute="top" id="kFt-WU-MPO"/>
-                            <constraint firstItem="sJN-xZ-sMP" firstAttribute="trailing" secondItem="Hei-Tk-78x" secondAttribute="trailing" id="qNe-LK-ERh"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hei-Tk-78x"/>
                     </view>
                     <navigationItem key="navigationItem" id="kMD-vX-zhV"/>
-                    <connections>
-                        <outlet property="adventureTableView" destination="sJN-xZ-sMP" id="RIP-sT-duE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtD-Px-4aS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

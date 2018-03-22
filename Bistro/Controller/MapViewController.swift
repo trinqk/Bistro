@@ -33,16 +33,14 @@ class MapViewController: UIViewController {
         
         // Delegates
         mapView.showsPointsOfInterest = false
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         if CLLocationManager.authorizationStatus() != .authorizedAlways
         {
-            print("requesting permission")
+            print("hi")
             locationManager.requestAlwaysAuthorization()
-        } else {
-            print("getting location")
-            locationManager.startUpdatingLocation()
         }
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManager.startUpdatingLocation()
     }
     
     // Additional Setup

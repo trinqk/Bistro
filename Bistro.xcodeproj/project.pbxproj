@@ -17,6 +17,7 @@
 		09F89BF32063157700755D3C /* AdventureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F89BF22063157700755D3C /* AdventureViewController.swift */; };
 		09F89C0020635EFB00755D3C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F89BFF20635EFB00755D3C /* Restaurant.swift */; };
 		09F89C022063890800755D3C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F89C012063890700755D3C /* MapKit.framework */; };
+		09F89C0420639BFD00755D3C /* CardKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F89C0320639BFD00755D3C /* CardKit.swift */; };
 		A8AB2ED50DBAEE4B50A50476 /* Pods_Bistro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370646AA60A5A869A89A0B0F /* Pods_Bistro.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		09F89BF22063157700755D3C /* AdventureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureViewController.swift; sourceTree = "<group>"; };
 		09F89BFF20635EFB00755D3C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		09F89C012063890700755D3C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		09F89C0320639BFD00755D3C /* CardKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardKit.swift; sourceTree = "<group>"; };
 		370646AA60A5A869A89A0B0F /* Pods_Bistro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bistro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8574E4B0DB2581040DB12C9 /* Pods-Bistro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bistro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bistro/Pods-Bistro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +97,6 @@
 		0962DA282060FD4B004140D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				09F89BFE20635EDD00755D3C /* CustomCells */,
 				0962DA1E2060FCE9004140D3 /* LaunchScreen.storyboard */,
 				0962DA192060FCE9004140D3 /* Main.storyboard */,
 			);
@@ -107,15 +108,9 @@
 			children = (
 				09F5A10520612437008FAF8E /* Constants.swift */,
 				09F89BFF20635EFB00755D3C /* Restaurant.swift */,
+				09F89C0320639BFD00755D3C /* CardKit.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		09F89BFE20635EDD00755D3C /* CustomCells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		82DD08C1F234B2B15F127A95 /* Frameworks */ = {
@@ -302,6 +297,7 @@
 			files = (
 				0962DA182060FCE9004140D3 /* MapViewController.swift in Sources */,
 				09F89BF32063157700755D3C /* AdventureViewController.swift in Sources */,
+				09F89C0420639BFD00755D3C /* CardKit.swift in Sources */,
 				09F89C0020635EFB00755D3C /* Restaurant.swift in Sources */,
 				09F5A10620612437008FAF8E /* Constants.swift in Sources */,
 				0962DA162060FCE9004140D3 /* AppDelegate.swift in Sources */,
@@ -445,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7N99HYVM3D;
 				INFOPLIST_FILE = Bistro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JL.Bistro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -461,6 +458,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7N99HYVM3D;
 				INFOPLIST_FILE = Bistro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JL.Bistro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
