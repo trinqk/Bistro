@@ -13,10 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UITabBar.appearance().barTintColor = UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 1)
+        UITabBar.appearance().tintColor = UIColor.white
+        UITabBar.appearance().unselectedItemTintColor = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes  = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UIApplication.shared.statusBarStyle = .lightContent
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

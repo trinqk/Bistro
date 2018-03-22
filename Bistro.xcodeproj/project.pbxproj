@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0962DA162060FCE9004140D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0962DA152060FCE9004140D3 /* AppDelegate.swift */; };
-		0962DA182060FCE9004140D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0962DA172060FCE9004140D3 /* HomeViewController.swift */; };
+		0962DA182060FCE9004140D3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0962DA172060FCE9004140D3 /* MapViewController.swift */; };
 		0962DA1B2060FCE9004140D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0962DA192060FCE9004140D3 /* Main.storyboard */; };
 		0962DA1D2060FCE9004140D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0962DA1C2060FCE9004140D3 /* Assets.xcassets */; };
 		0962DA202060FCE9004140D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0962DA1E2060FCE9004140D3 /* LaunchScreen.storyboard */; };
 		09EFF807206107DB0044213E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09EFF806206107DA0044213E /* GoogleService-Info.plist */; };
 		09F5A10620612437008FAF8E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F5A10520612437008FAF8E /* Constants.swift */; };
+		09F89BF32063157700755D3C /* AdventureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F89BF22063157700755D3C /* AdventureViewController.swift */; };
+		09F89C0020635EFB00755D3C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F89BFF20635EFB00755D3C /* Restaurant.swift */; };
+		09F89C022063890800755D3C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F89C012063890700755D3C /* MapKit.framework */; };
 		A8AB2ED50DBAEE4B50A50476 /* Pods_Bistro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370646AA60A5A869A89A0B0F /* Pods_Bistro.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,13 +24,16 @@
 		02D40630D60F83C56FEC94BE /* Pods-Bistro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bistro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bistro/Pods-Bistro.debug.xcconfig"; sourceTree = "<group>"; };
 		0962DA122060FCE9004140D3 /* Bistro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bistro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0962DA152060FCE9004140D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0962DA172060FCE9004140D3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0962DA172060FCE9004140D3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0962DA1A2060FCE9004140D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0962DA1C2060FCE9004140D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0962DA1F2060FCE9004140D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0962DA212060FCE9004140D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09EFF806206107DA0044213E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		09F5A10520612437008FAF8E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		09F89BF22063157700755D3C /* AdventureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureViewController.swift; sourceTree = "<group>"; };
+		09F89BFF20635EFB00755D3C /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		09F89C012063890700755D3C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		370646AA60A5A869A89A0B0F /* Pods_Bistro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bistro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8574E4B0DB2581040DB12C9 /* Pods-Bistro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bistro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bistro/Pods-Bistro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F89C022063890800755D3C /* MapKit.framework in Frameworks */,
 				A8AB2ED50DBAEE4B50A50476 /* Pods_Bistro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,8 +86,8 @@
 		0962DA272060FD3C004140D3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				09F5A10520612437008FAF8E /* Constants.swift */,
-				0962DA172060FCE9004140D3 /* HomeViewController.swift */,
+				0962DA172060FCE9004140D3 /* MapViewController.swift */,
+				09F89BF22063157700755D3C /* AdventureViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -88,6 +95,7 @@
 		0962DA282060FD4B004140D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				09F89BFE20635EDD00755D3C /* CustomCells */,
 				0962DA1E2060FCE9004140D3 /* LaunchScreen.storyboard */,
 				0962DA192060FCE9004140D3 /* Main.storyboard */,
 			);
@@ -97,13 +105,23 @@
 		0962DA292060FD55004140D3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				09F5A10520612437008FAF8E /* Constants.swift */,
+				09F89BFF20635EFB00755D3C /* Restaurant.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		09F89BFE20635EDD00755D3C /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		82DD08C1F234B2B15F127A95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09F89C012063890700755D3C /* MapKit.framework */,
 				370646AA60A5A869A89A0B0F /* Pods_Bistro.framework */,
 			);
 			name = Frameworks;
@@ -154,6 +172,14 @@
 					0962DA112060FCE9004140D3 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -274,7 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0962DA182060FCE9004140D3 /* HomeViewController.swift in Sources */,
+				0962DA182060FCE9004140D3 /* MapViewController.swift in Sources */,
+				09F89BF32063157700755D3C /* AdventureViewController.swift in Sources */,
+				09F89C0020635EFB00755D3C /* Restaurant.swift in Sources */,
 				09F5A10620612437008FAF8E /* Constants.swift in Sources */,
 				0962DA162060FCE9004140D3 /* AppDelegate.swift in Sources */,
 			);
