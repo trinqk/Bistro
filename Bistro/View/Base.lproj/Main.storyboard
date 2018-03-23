@@ -48,13 +48,23 @@
                                     <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdQ-se-lq4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T12-1R-lt8">
+                                <rect key="frame" x="152" y="537" width="70" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="2R2-u7-7Oh"/>
+                                    <constraint firstAttribute="width" constant="70" id="fv1-pc-7sv"/>
+                                </constraints>
+                                <state key="normal" image="check"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5iE-pX-hO9" secondAttribute="bottom" constant="16" id="9nT-KI-mvt"/>
                             <constraint firstItem="GmE-mD-6gF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M83-JE-xhh"/>
+                            <constraint firstItem="T12-1R-lt8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XWb-Wr-ZJ4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5iE-pX-hO9" secondAttribute="trailing" constant="16" id="a3Z-f7-ZJP"/>
                             <constraint firstItem="GmE-mD-6gF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dct-c3-gMc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T12-1R-lt8" secondAttribute="bottom" constant="16" id="pKM-Bc-fjR"/>
                             <constraint firstItem="GmE-mD-6gF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rrx-kU-tMa"/>
                             <constraint firstItem="GmE-mD-6gF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yUB-sR-viR"/>
                         </constraints>
@@ -64,6 +74,7 @@
                     <connections>
                         <outlet property="mapView" destination="GmE-mD-6gF" id="FIE-1w-o2i"/>
                         <outlet property="searchButtonOutlet" destination="5iE-pX-hO9" id="XZF-mV-s21"/>
+                        <outlet property="searchRandomOutlet" destination="T12-1R-lt8" id="waM-lo-0Hp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -174,6 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="check" width="32" height="32"/>
         <image name="die" width="256" height="256"/>
         <image name="favorite" width="32" height="32"/>
         <image name="find" width="32" height="32"/>
