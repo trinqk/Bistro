@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Adventure View Controller-->
+        <!--Adventure-->
         <scene sceneID="Jg4-sx-npw">
             <objects>
                 <viewController id="8TO-ly-gUe" customClass="AdventureViewController" customModule="Bistro" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Hei-Tk-78x"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kMD-vX-zhV"/>
+                    <navigationItem key="navigationItem" title="Adventure" id="kMD-vX-zhV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtD-Px-4aS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
