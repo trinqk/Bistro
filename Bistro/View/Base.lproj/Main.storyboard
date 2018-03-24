@@ -49,10 +49,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T12-1R-lt8">
-                                <rect key="frame" x="152" y="537" width="70" height="65"/>
+                                <rect key="frame" x="154.5" y="537" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="2R2-u7-7Oh"/>
-                                    <constraint firstAttribute="width" constant="70" id="fv1-pc-7sv"/>
+                                    <constraint firstAttribute="width" constant="65" id="fv1-pc-7sv"/>
                                 </constraints>
                                 <state key="normal" image="check"/>
                             </button>

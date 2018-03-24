@@ -28,6 +28,31 @@ class MapViewController: UIViewController {
         return view
     }()
     
+    let filterTabView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 1)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    let closeButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "close"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let filterTabViewLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Food Filter"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = UIColor.white
+        label.font = UIFont(name: "Helvetica Neue", size: 22.0)
+        label.font = UIFont.boldSystemFont(ofSize: 22.0)
+        label.textAlignment = .center
+        return label
+    }()
+    
     let locationManager = CLLocationManager()
     var currentCoordinate: CLLocationCoordinate2D!
     
@@ -62,8 +87,6 @@ class MapViewController: UIViewController {
     
     @IBAction func searchButton(_ sender: Any) {
         if filterOn == false {
-            filterContainerView.isHidden = false
-            filterOn = true
             moveSearchButtonToCenter()
         }
     }
@@ -91,6 +114,25 @@ class MapViewController: UIViewController {
         filterContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         filterContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
         filterContainerView.heightAnchor.constraint(equalToConstant: 400).isActive = true
+        
+        filterContainerView.addSubview(filterTabView)
+        filterTabView.leadingAnchor.constraint(equalTo: filterContainerView.leadingAnchor).isActive = true
+        filterTabView.topAnchor.constraint(equalTo: filterContainerView.topAnchor).isActive = true
+        filterTabView.widthAnchor.constraint(equalTo: filterContainerView.widthAnchor).isActive = true
+        filterTabView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        filterTabView.addSubview(closeButton)
+        closeButton.trailingAnchor.constraint(equalTo: filterTabView.trailingAnchor, constant: -10).isActive = true
+        closeButton.centerYAnchor.constraint(equalTo: filterTabView.centerYAnchor).isActive = true
+        closeButton.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        closeButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        closeButton.addTarget(self, action: #selector(moveSearchButtonToRight), for: .touchUpInside)
+        
+        filterTabView.addSubview(filterTabViewLabel)
+        filterTabViewLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        filterTabViewLabel.centerYAnchor.constraint(equalTo: filterTabView.centerYAnchor).isActive = true
+        filterTabViewLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        filterTabViewLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
     }
     
     // MARK: ANIMATIONS
@@ -99,13 +141,19 @@ class MapViewController: UIViewController {
             self.searchButtonOutlet.center = CGPoint(x: self.view.frame.width + (self.searchButtonOutlet.frame.width / 2), y: self.searchButtonOutlet.center.y)
             self.searchRandomOutlet.center = CGPoint(x: self.view.center.x, y: self.searchRandomOutlet.center.y)
         })
+        mapView.isUserInteractionEnabled = false
+        filterContainerView.isHidden = false
+        filterOn = true
     }
     
-    func moveSearchButtonToRight() {
+    @objc func moveSearchButtonToRight() {
         UIView.animate(withDuration: 0.5, animations: {
             self.searchButtonOutlet.center = CGPoint(x: self.view.frame.width - 16 - (self.searchButtonOutlet.frame.width / 2), y: self.searchButtonOutlet.center.y)
             self.searchRandomOutlet.center = CGPoint(x: 0 - (self.searchRandomOutlet.frame.width / 2), y: self.searchRandomOutlet.center.y)
         })
+        mapView.isUserInteractionEnabled = true
+        filterContainerView.isHidden = true
+        filterOn = false
     }
 }
 
@@ -123,13 +171,6 @@ extension MapViewController: MKMapViewDelegate {
         return MKOverlayRenderer()
     }
 }
-
-
-
-
-
-
-
 
 
 
