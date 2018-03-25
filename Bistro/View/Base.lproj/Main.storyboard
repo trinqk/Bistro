@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,33 +37,36 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iE-pX-hO9">
-                                <rect key="frame" x="289" y="537" width="70" height="65"/>
+                                <rect key="frame" x="303" y="546" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="nhM-z4-Ubr"/>
-                                    <constraint firstAttribute="height" constant="65" id="xu6-ES-17r"/>
+                                    <constraint firstAttribute="width" constant="60" id="nhM-z4-Ubr"/>
+                                    <constraint firstAttribute="height" constant="60" id="xu6-ES-17r"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="die"/>
+                                <state key="normal" image="doughnut"/>
                                 <connections>
                                     <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdQ-se-lq4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T12-1R-lt8">
-                                <rect key="frame" x="154.5" y="537" width="65" height="65"/>
+                                <rect key="frame" x="154.5" y="541" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="2R2-u7-7Oh"/>
                                     <constraint firstAttribute="width" constant="65" id="fv1-pc-7sv"/>
                                 </constraints>
                                 <state key="normal" image="check"/>
+                                <connections>
+                                    <action selector="confirmSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mj2-NU-Mr6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5iE-pX-hO9" secondAttribute="bottom" constant="16" id="9nT-KI-mvt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5iE-pX-hO9" secondAttribute="bottom" constant="12" id="9nT-KI-mvt"/>
                             <constraint firstItem="GmE-mD-6gF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M83-JE-xhh"/>
                             <constraint firstItem="T12-1R-lt8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XWb-Wr-ZJ4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5iE-pX-hO9" secondAttribute="trailing" constant="16" id="a3Z-f7-ZJP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5iE-pX-hO9" secondAttribute="trailing" constant="12" id="a3Z-f7-ZJP"/>
                             <constraint firstItem="GmE-mD-6gF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dct-c3-gMc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T12-1R-lt8" secondAttribute="bottom" constant="16" id="pKM-Bc-fjR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T12-1R-lt8" secondAttribute="bottom" constant="12" id="pKM-Bc-fjR"/>
                             <constraint firstItem="GmE-mD-6gF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rrx-kU-tMa"/>
                             <constraint firstItem="GmE-mD-6gF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yUB-sR-viR"/>
                         </constraints>
@@ -186,7 +188,7 @@
     </scenes>
     <resources>
         <image name="check" width="32" height="32"/>
-        <image name="die" width="256" height="256"/>
+        <image name="doughnut" width="120" height="120"/>
         <image name="favorite" width="32" height="32"/>
         <image name="find" width="32" height="32"/>
         <image name="profile" width="32" height="32"/>

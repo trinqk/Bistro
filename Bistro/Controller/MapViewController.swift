@@ -12,10 +12,6 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController {
-
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var searchButtonOutlet: UIButton!
-    @IBOutlet weak var searchRandomOutlet: UIButton!
     
     let filterContainerView: UIView = {
         let view = UIView()
@@ -44,7 +40,7 @@ class MapViewController: UIViewController {
     
     let filterTabViewLabel: UILabel = {
         let label = UILabel()
-        label.text = "Food Filter"
+        label.text = "Bistro Filter"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.white
         label.font = UIFont(name: "Helvetica Neue", size: 22.0)
@@ -52,6 +48,10 @@ class MapViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
+
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var searchButtonOutlet: UIButton!
+    @IBOutlet weak var searchRandomOutlet: UIButton!
     
     let locationManager = CLLocationManager()
     var currentCoordinate: CLLocationCoordinate2D!
@@ -91,11 +91,18 @@ class MapViewController: UIViewController {
         }
     }
     
+    @IBAction func confirmSearchButton(_ sender: Any) {
+        print("hello")
+    }
+    
+    
     // MARK: VISUAL SETUPS
     // Additional Setup
     func setUpButton() {
         searchButtonOutlet.backgroundColor = UIColor.white
         searchButtonOutlet.layer.cornerRadius = 0.5 * searchButtonOutlet.bounds.size.width
+        searchButtonOutlet.layer.borderColor = UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 1).cgColor
+        searchButtonOutlet.layer.borderWidth = 3.0
         searchButtonOutlet.imageEdgeInsets = UIEdgeInsetsMake(8,8,8,8)
         searchButtonOutlet.clipsToBounds = true
         
@@ -129,7 +136,7 @@ class MapViewController: UIViewController {
         closeButton.addTarget(self, action: #selector(moveSearchButtonToRight), for: .touchUpInside)
         
         filterTabView.addSubview(filterTabViewLabel)
-        filterTabViewLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        filterTabViewLabel.centerXAnchor.constraint(equalTo: filterTabView.centerXAnchor).isActive = true
         filterTabViewLabel.centerYAnchor.constraint(equalTo: filterTabView.centerYAnchor).isActive = true
         filterTabViewLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         filterTabViewLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
